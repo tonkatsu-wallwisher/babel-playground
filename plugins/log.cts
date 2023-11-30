@@ -24,7 +24,7 @@ export default function ({ types: t }: Babel): PluginObj {
   }
 
   return {
-    name: 'lodash-to-lodash-es',
+    name: 'console-log-location',
     visitor: {
       CallExpression(path, state) {
         if (
