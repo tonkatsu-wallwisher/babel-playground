@@ -1,0 +1,31 @@
+{
+  "name": "babel-playground",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "plugin": "babel index.ts --watch --extensions '.ts,.cts' --out-file output.js",
+    "example1": "bun plugin --plugins ./plugins/basic.cjs",
+    "example2": "bun plugin --plugins ./plugins/print.cts",
+    "example3": "bun plugin --plugins ./plugins/demorgan.cts",
+    "example4": "bun plugin --plugins ./plugins/lodashes-simple.cts",
+    "example4-2": "bun plugin --plugins ./plugins/lodashes.cts"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "lodash-es": "^4.17.21"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.23.4",
+    "@babel/core": "^7.23.3",
+    "@babel/preset-env": "^7.23.3",
+    "@babel/preset-typescript": "^7.23.3",
+    "@babel/types": "^7.23.4",
+    "@types/babel__core": "^7.20.5",
+    "@types/lodash": "^4.14.202",
+    "@types/lodash-es": "^4.17.12",
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

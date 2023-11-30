@@ -1,0 +1,21 @@
+{
+  "Example 4 Import visitor": {
+    "prefix": "eg4-import",
+    "body": [
+      "const lodashMethods = new Set<string>()",
+      "path.parentPath.traverse({",
+      "\tMemberExpression(subPath) {",
+      "\tif (t.isIdentifier(subPath.node.object, { name: '_' }) && t.isIdentifier(subPath.node.property)) {",
+      "\t\tlodashMethods.add(subPath.node.property.name)",
+      "\t}",
+      "\t},",
+      "})",
+      "path.insertAfter([",
+      "\tt.importDeclaration(",
+      "\t[...lodashMethods].map((method) => t.importSpecifier(t.identifier(method), t.identifier(method))),",
+      "\tt.stringLiteral('lodash-es'),",
+      "\t),",
+      "])"
+    ]
+  }
+}
