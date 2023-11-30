@@ -9,7 +9,8 @@
     "example3": "bun plugin --plugins ./plugins/demorgan.cts",
     "example4": "bun plugin --plugins ./plugins/lodashes-simple.cts",
     "example4-2": "bun plugin --plugins ./plugins/lodashes.cts",
-    "example5": "bun plugin --plugins ./plugins/log.cts"
+    "example5": "bun plugin --plugins ./plugins/log.cts",
+    "worklets": "babel worklets.ts --watch --extensions '.ts' --out-file worklets.js --plugins react-native-worklets-core/plugin"
   },
   "dependencies": {
     "lodash": "^4.17.21",
@@ -24,7 +25,8 @@
     "@types/babel__core": "^7.20.5",
     "@types/lodash": "^4.14.202",
     "@types/lodash-es": "^4.17.12",
-    "bun-types": "latest"
+    "bun-types": "latest",
+    "react-native-worklets-core": "^0.2.4"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
