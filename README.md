@@ -1,15 +1,19 @@
-# babel-playground
+# Babel Playground
 
-To install dependencies:
+## Setup
+
+Install dependencies
 
 ```bash
 bun install
 ```
 
-To run:
+then, run tests by running `bun example<number>`
 
 ```bash
-bun run index.ts
+bun example1
 ```
 
-This project was created using `bun init` in bun v1.0.13. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+## Links
+
+- Padlet: https://padlet.com/tonkatsu/build-a-babel-lsbncfckcqi310pc
